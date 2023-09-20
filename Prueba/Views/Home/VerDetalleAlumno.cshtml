@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Detalle alumnos";
+}
+<div class="text center">
+<h2>Detalles de los alumnos: </h2>
+<h4><strong> Nombre:</strong> @ViewBag.Alumno.Nombre
+<h4><strong> Apellido:</strong> @ViewBag.Alumno.Apellido
+<h4><strong> Curso:</strong> @ViewBag.Alumno.Curso
+<h4><strong> Legajo:</strong> @ViewBag.Alumno.Legajo
+<h4><strong> Edad:</strong> @ViewBag.Alumno.Edad
+<h4><strong> Promedio:</strong> @ViewBag.Alumno.Promedio
+<h4><strong> Especialidad:</strong> @ViewBag.Alumno.Especialidad
+<h4><strong> resultadoNota:</strong> @ViewBag.ResultadoNota
+
+</div>
+
+ <a class="btn btn-info" href='@Url.Action("Index","Home")'>Volver al inicio</a>

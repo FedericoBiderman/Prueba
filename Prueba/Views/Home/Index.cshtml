@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Alumnos Desaprobados</h1>
+@foreach (Alumno item in ViewBag.ListaAlumnosAprobados)
+{
+    <div class="text-center">
+        <pre>@item.Nombre</pre>
+        <pre>@item.Apellido</pre>
+        <pre>@item.Curso</pre>
+        <pre>@item.Legajo</pre>
+    </div>
+ <a class="btn btn-info" href='@Url.Action("VerDetalleAlumno","Home", new {IdAlumno = item.IdAlumno})'>Ver Detalle del alumno</a>
+
+}
+
+<h1>Alumnos Aprobados</h1>
+@foreach (Alumno item in ViewBag.ListaAlumnosDesaprobados)
+{
+    <div class="text-center">
+        <pre>@item.Nombre</pre>
+        <pre>@item.Apellido</pre>
+        <pre>@item.Curso</pre>
+        <pre>@item.Legajo</pre>
+    </div>
+ <a class="btn btn-info" href='@Url.Action("VerDetalleAlumno","Home", new {IdAlumno = item.IdAlumno})'>Ver Detalle del alumno</a>
+
+}
